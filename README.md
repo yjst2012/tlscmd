@@ -1,2 +1,2 @@
 # tlscmd
-a tls secured cmd tunnel
+a tls secured cmd tunnel running between two remote nodes.
