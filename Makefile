@@ -1,5 +1,5 @@
-BINARY=tserver
-CLIENT_BINARY=tclient
+BINARY=./bin/tserver
+CLIENT_BINARY=./bin/tclient
 
 VERSION=1.0.0
 BUILD=`git rev-parse HEAD`
@@ -10,6 +10,7 @@ BUILD=`git rev-parse HEAD`
 
 
 build:
+	mkdir ./bin
 	cd server && go get -t ./...
 	go build -o ${BINARY} server/*.go
 	cd client && go get -t ./...
@@ -17,7 +18,8 @@ build:
 
 
 run:
-	./${BINARY}
+	${BINARY}
+	$(CLIENT_BINARY)
 
 install:
 	go install
