@@ -1,3 +1,10 @@
 tserver
 tclient
 bin
+
+.DS_Store
+!.gitignore
+!Dockerfile*
+
+# Ignore temporary files
+*~
